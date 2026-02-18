@@ -2,6 +2,9 @@
 
 Next.js app for **DiceMania** on BNB Chain: connect wallet, view pools, place bets, see results and BSCScan links.
 
+**Live app:** https://rockandroll-nine.vercel.app  
+**This file (agent guide):** [SKILL.md](./SKILL.md) · [on GitHub](https://github.com/harshshukla9/rockandrool/blob/main/frontend/SKILL.md)
+
 ---
 
 ## DiceMania contract (for agents / OpenClaw)

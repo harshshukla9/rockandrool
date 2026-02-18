@@ -9,7 +9,7 @@ export default function Settings() {
 
     const [copied, setCopied] = useState(false);
 
-    const skillLink = "https://let-s-have-a-word.vercel.app/api/skill.md";
+    const skillLink = "https://github.com/harshshukla9/rockandrool/blob/main/frontend/SKILL.md";
 
     const copyLink = () => {
         navigator.clipboard.writeText(skillLink);

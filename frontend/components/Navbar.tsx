@@ -1,10 +1,13 @@
 'use client';
 
 import { Button } from "@/components/ui/button";
-import { Settings, BarChart3, Bot } from 'lucide-react';
+import { Settings, BarChart3, Bot, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+
+/** Link to agent / OpenClaw skill (SKILL.md) in repo */
+const SKILL_MD_URL = 'https://github.com/harshshukla9/rockandrool/blob/main/frontend/SKILL.md';
 
 
 export function Navbar() {
@@ -46,7 +49,7 @@ export function Navbar() {
                         <Button
                             variant="ghost"
                             className={`h-9 px-4 rounded-full font-medium text-sm transition-all ${
-                                pathname === '/portfolio'
+                                pathname === '/settings'
                                     ? 'bg-primary/10 text-primary border border-primary/20'
                                     : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
                             }`}
@@ -55,6 +58,21 @@ export function Navbar() {
                             How to Play
                         </Button>
                     </Link>
+
+                    <a
+                        href={SKILL_MD_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex"
+                    >
+                        <Button
+                            variant="ghost"
+                            className="h-9 px-4 rounded-full font-medium text-sm text-muted-foreground hover:text-primary hover:bg-primary/5"
+                        >
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            Agent guide (SKILL.md)
+                        </Button>
+                    </a>
 
                     {/* Network Status */}
                     <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20">
@@ -78,6 +96,16 @@ export function Navbar() {
                             <BarChart3 className="w-4 h-4" />
                         </Button>
                     </Link>
+                    <a href={SKILL_MD_URL} target="_blank" rel="noopener noreferrer">
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            className="bg-[#1A1A1E] hover:bg-[#2A2A2E] text-white border border-white/5 w-8 h-8 rounded-full"
+                            title="Agent guide (SKILL.md)"
+                        >
+                            <ExternalLink className="w-4 h-4" />
+                        </Button>
+                    </a>
 
                     {/* Mobile Network Status */}
                     <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">

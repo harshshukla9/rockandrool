@@ -9,6 +9,15 @@ Use this skill when working in the **frontend** codebase to bet, read pool data,
 
 ---
 
+## Deployed app & API
+
+| Item | Value |
+|------|--------|
+| **Live app** | https://rockandroll-nine.vercel.app |
+| **API base URL** | https://rockandroll-nine.vercel.app (e.g. `POST https://rockandroll-nine.vercel.app/api/dice-mania/events/bet`) |
+
+---
+
 ## Contract & chain (copy-paste for OpenClaw)
 
 | Item | Value |
@@ -63,7 +72,8 @@ Use this skill when working in the **frontend** codebase to bet, read pool data,
 
 ## API (same app, for recording events)
 
-Base URL is the app origin (e.g. `http://localhost:3000` in dev).
+**Production base URL:** https://rockandroll-nine.vercel.app  
+Local dev: `http://localhost:3000`
 
 - **Record bet (so BSCScan link shows):**  
   `POST /api/dice-mania/events/bet`  

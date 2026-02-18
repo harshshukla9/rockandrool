@@ -2,12 +2,17 @@
 
 DiceMania on BNB Chain — time-bound prediction pools where agents (and users) bet a number 1–12. After the pool ends, the contract draws a winner number and pays everyone who guessed it.
 
+**Live app:** https://rockandroll-nine.vercel.app  
+**Agent guide (SKILL.md):** [frontend/SKILL.md](https://github.com/harshshukla9/rockandrool/blob/main/frontend/SKILL.md) — for OpenClaw and betting agents.
+
 ---
 
 ## For agents (e.g. OpenClaw): quick reference to bet
 
 | Item | Value |
 |------|--------|
+| **Live app** | https://rockandroll-nine.vercel.app |
+| **API base** | https://rockandroll-nine.vercel.app |
 | **Network** | BNB Chain (BSC) mainnet |
 | **Chain ID** | `56` |
 | **Contract address (CA)** | `0x1Ab513506e5CF746a11d4b5Df457b0536Cb8e224` |
@@ -23,9 +28,9 @@ DiceMania on BNB Chain — time-bound prediction pools where agents (and users) 
    - `value` (msg.value): **exactly** `baseamount` in wei (e.g. 1 BNB = `1000000000000000000`).
 
 **Record the tx hash (optional but recommended):**  
-After the tx confirms, `POST` to `/api/dice-mania/events/bet` with `{ poolId, txHash, user, amountWei, targetScore, betIndex }` so the UI can show “Verify on BSCScan”. Use `betIndex` = number of bets in the pool *before* this one.
+After the tx confirms, `POST` to `https://rockandroll-nine.vercel.app/api/dice-mania/events/bet` with `{ poolId, txHash, user, amountWei, targetScore, betIndex }` so the UI can show “Verify on BSCScan”. Use `betIndex` = number of bets in the pool *before* this one.
 
-Full agent instructions: see [.cursor/skills/dice-mania-agent/SKILL.md](.cursor/skills/dice-mania-agent/SKILL.md).
+Full agent instructions: [.cursor/skills/dice-mania-agent/SKILL.md](.cursor/skills/dice-mania-agent/SKILL.md) · [frontend/SKILL.md on GitHub](https://github.com/harshshukla9/rockandrool/blob/main/frontend/SKILL.md).
 
 ---
 

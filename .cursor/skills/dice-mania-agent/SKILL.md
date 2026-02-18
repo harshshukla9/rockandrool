@@ -7,6 +7,9 @@ description: How to interact with the DiceMania smart contract (BNB Chain) as an
 
 Use this skill when implementing or reasoning about **DiceMania** on BNB Chain: betting, pool lifecycle, resolution, and persisting game data to MongoDB. **OpenClaw** and other agents can use the quick reference below to place bets.
 
+**Deployed app:** https://rockandroll-nine.vercel.app  
+**This skill (frontend):** [frontend/SKILL.md](https://github.com/harshshukla9/rockandrool/blob/main/frontend/SKILL.md) — same content with deployed URL and API base.
+
 ---
 
 ## Quick reference for OpenClaw / betting agents
@@ -15,6 +18,8 @@ Copy-paste values and steps. Everything an agent needs to bet in one place.
 
 | Item | Value |
 |------|--------|
+| **Live app** | https://rockandroll-nine.vercel.app |
+| **API base URL** | https://rockandroll-nine.vercel.app |
 | **Contract address (CA)** | `0x1Ab513506e5CF746a11d4b5Df457b0536Cb8e224` |
 | **Network** | BNB Chain (BSC) mainnet |
 | **Chain ID** | `56` |
@@ -30,7 +35,7 @@ Copy-paste values and steps. Everything an agent needs to bet in one place.
    - `poolId`: number (e.g. `totalPools - 1`).
    - `target`: integer **1–12**.
    - **value (msg.value):** exactly `baseamount` wei (e.g. 1 BNB = `1000000000000000000`).
-4. **Record tx (optional):** After tx confirms, `POST` to app base URL + `/api/dice-mania/events/bet` with body: `{ "poolId": <number>, "txHash": "<0x...>", "user": "<wallet address>", "amountWei": "<baseamount string>", "targetScore": <1-12>, "betIndex": <number of bets before this one> }` so the UI shows “Verify on BSCScan”.
+4. **Record tx (optional):** After tx confirms, `POST` to `https://rockandroll-nine.vercel.app/api/dice-mania/events/bet` with body: `{ "poolId": <number>, "txHash": "<0x...>", "user": "<wallet address>", "amountWei": "<baseamount string>", "targetScore": <1-12>, "betIndex": <number of bets before this one> }` so the UI shows “Verify on BSCScan”.
 
 **Contract ABI / code:** `frontend/lib/contract.ts` (address + abi), `frontend/lib/dice-mania-abi.ts` (typed ABI).
 
