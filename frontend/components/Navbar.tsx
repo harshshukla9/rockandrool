@@ -77,7 +77,7 @@ export function Navbar() {
                     {/* Network Status */}
                     <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20">
                         <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                        <span className="text-sm font-medium text-emerald-400">BNB Testnet Live</span>
+                        <span className="text-sm font-medium text-emerald-400">BNB  Live</span>
                     </div>
                 </div>
 
@@ -110,7 +110,7 @@ export function Navbar() {
                     {/* Mobile Network Status */}
                     <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
                         <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
-                        <span className="text-xs font-medium text-emerald-400">BNB Testnet</span>
+                        <span className="text-xs font-medium text-emerald-400">BNB </span>
                     </div>
                 </div>
             </div>
